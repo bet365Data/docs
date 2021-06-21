@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,6 +28,8 @@ jobs:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - run: yarn
     - run: yarn run docs:build
+    - run: rm -rf docs images node_modules crowdin.yaml package.json postcss.config.js tailwind.config.js yarn.lock
+    - run: mv page/* .
     - run: git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
     - run: git config --local user.name "github-actions[bot]"
     - run: git commit -m "Add changes" -a
