@@ -30,6 +30,8 @@ module.exports = {
           children: [
             "PreMatch1X2",
             "BasketballPreMatch",
+            "PreMatchOverUnderList",
+            "PrematchTopLeagues",
           ],
         },
         {
