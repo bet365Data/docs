@@ -28,11 +28,9 @@ jobs:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - run: yarn
     - run: yarn run docs:build
-    - name: Commit files
-       run: |
-           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-           git config --local user.name "github-actions[bot]"
-           git commit -m "Add changes" -a
+    - run: git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    - run: git config --local user.name "github-actions[bot]"
+    - run: git commit -m "Add changes" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
