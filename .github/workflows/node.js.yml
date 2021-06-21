@@ -32,6 +32,7 @@ jobs:
     - run: mv page/* .
     - run: git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
     - run: git config --local user.name "github-actions[bot]"
+    - run: git add .
     - run: git commit -m "Add changes" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
