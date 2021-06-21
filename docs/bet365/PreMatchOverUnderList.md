@@ -15,8 +15,9 @@
 ### 4) Request parameters:
 
 #### GET parameters:
+
 |Field name |Field description |Type |Required |Remarks |
-| -------------|:--------------:|:--------------:|: --------------:| ------:|
+| -------------|--------------|--------------| --------------| ------|
 |LangCode|Game language|string|N (default is 1 English)|For details, please refer to LangCodeModel|
 
 
@@ -29,7 +30,7 @@ curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnd
 
 #### LangCodeModel:
 |LangType |LangCode |Remarks |
-|:-------------|:--------------:|:-------------:|
+|-------------|--------------|-------------|
 |English|1|-|
 |Traditional Chinese|2|-|
 |Español|3|-|
@@ -54,14 +55,14 @@ curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnd
 
 #### GET parameters:
 |Field name |Field description |Type |Required |Remarks |
-| -------------|:--------------:|:--------------:|: --------------:| ------:|
+| -------------|--------------| -------------- |  -------------- | ------ |
 |Code|interface code status |int|N|See CodeModel|
 |Data|Competition Information|DataModel|N|See DataModel|
 |Msg|interface code message|MsgModel|N|-|
 
 #### DataModel parameters:
 |Field name |Field description |Type |Required |Remarks |
-| -------------|:--------------|:--------------:|:- -------------:| ------:|
+| -------------| --------------| -------------- | - ------------- | ------ |
 |List|Game List Information|Array|N|See ListModel|
 |Total|Total number of matches|int|N|-|
 |Channel|Current market name|string|N|-|
@@ -70,7 +71,7 @@ curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnd
 
 #### ListModel:
 |Field name |Field description |Type |Required |Remarks |
-| -------------|:--------------|:--------------:|:- -------------:|:------|
+| -------------| --------------| -------------- | - ------------- | ------|
 |TeamID|Unique ID of the competition team|string|N|See ListModel|
 |TeamIt|Can be used to place an order|string|N|Total number of matches|
 |TeamMr|Team Heat|string|N|See LangCodeModel|
@@ -86,7 +87,7 @@ curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnd
 
 #### OverModel parameters:
 |Field name |Field description |Type |Required |Remarks |
-| -------------|:--------------|:--------------:|:- -------------:| ------:|
+| -------------| --------------| -------------- | - ------------- | ------ |
 |Types||int|N|See ListModel|
 |ID||int|N|Total number of matches|
 |Fi||string|N|See LangCodeModel|
@@ -94,7 +95,7 @@ curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnd
 
 #### UnderModel parameters:
 |Field name |Field description |Type |Required |Remarks |
-| -------------|:--------------|:--------------:|:- -------------:|:------|
+| -------------| --------------| -------------- | - ------------- | ------|
 |Types||int|N|See ListModel|
 |ID||int|N|Total number of matches|
 |Fi||string|N|See LangCodeModel|
