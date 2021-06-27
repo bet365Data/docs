@@ -6,7 +6,7 @@
 
 >http://api.bet365data.com/bet365/preMatch/overUnder?LangCode=1
 
-## 2) Calling method: HTTP get
+## 2) Call method: HTTP get
 
 ## 3) Interface description:
 
