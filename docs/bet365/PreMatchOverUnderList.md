@@ -14,7 +14,7 @@
 
 ## 4) Request parameters:
 
-## GET parameters:
+# GET parameters:
 
 |Field name |Field description |Type |Required |Remarks |
 | -------------|--------------|--------------| --------------| ------|
@@ -22,13 +22,13 @@
 
 
 
-## Request Example
+# Request Example
 ```zsh
 curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnder?LangCode=2' \
 --header 'x-token: Please contact us by Telegram to get token" http://api.bet365data.com/bet365/preMatch/overUnder?LangCode=1'
 ```
 
-## LangCodeModel:
+# LangCodeModel:
 |LangType |LangCode |Remarks |
 |-------------|--------------|-------------|
 |English|1|-|
@@ -53,14 +53,14 @@ curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnd
 |Русский|31|-|
 
 
-## GET parameters:
+# GET parameters:
 |Field name |Field description |Type |Required |Remarks |
 | -------------|--------------| -------------- |  -------------- | ------ |
 |Code|interface code status |int|N|See CodeModel|
 |Data|Competition Information|DataModel|N|See DataModel|
 |Msg|interface code message|MsgModel|N|-|
 
-#### DataModel parameters:
+## DataModel parameters:
 
 |Field name |Field description |Type |Required |Remarks |
 | -------------| --------------| -------------- | -------------- | ------ |
@@ -107,7 +107,7 @@ curl --location --request GET 'http://api.bet365data.com/bet365/preMatch/overUnd
 
 
 
-## 5) Request to return result:
+# 5) Request to return result:
 ```json
 {
     "code": 0,
