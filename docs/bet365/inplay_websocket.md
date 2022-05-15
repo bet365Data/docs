@@ -1,6 +1,17 @@
 # bet365 inplay websocket
 
 
+## websocket sub address 
+```
+wss://www.bet365data.com/ws/inplay/en?token=${YOU-TOKEN}
+```
+### OR
+
+```
+ws://www.bet365data.com/ws/inplay/en?token=${YOU-TOKEN}
+```
+
+
 competition  | Market| 
 ------------- | -------------
 Soccer  | All
@@ -14,6 +25,9 @@ Handball |All
 Ice Hockey| All
 Table Tennis | All
 Volleyball | All
+
+
+Please contact us by Telegram to get token
 
 
 ## All inplay competition List example
