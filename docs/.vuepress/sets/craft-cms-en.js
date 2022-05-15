@@ -38,6 +38,7 @@ module.exports = {
           title: "Inplay API",
           collapsable: false,
           children: [
+            'InplayWebsocket',
             'BasketballPreMatch',
             "AsianHandiCap",
             "FullTimeFullWin",
