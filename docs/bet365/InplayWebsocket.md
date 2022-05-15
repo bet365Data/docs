@@ -12,20 +12,28 @@ ws://www.bet365data.com/ws/inplay/en?token=${YOU-TOKEN}
 ```
 
 
-competition  | Market| 
-------------- | -------------
-Soccer  | All
-Tennis   | All
-Baseball    | All
-Vincent van der Voort"  | All
-Esports | All
-Futsal |All
-Golf |All
-Handball |All
-Ice Hockey| All
-Table Tennis | All
-Volleyball | All
-
+Competition   | Market        | Media|
+------------- | ------------- | -------------
+Soccer  | All |Support animation playback, please contact Telegram for audio/video
+Tennis   | All  |Support animation playback, please contact Telegram for audio/video
+Baseball    | All  |Support animation playback, please contact Telegram for audio/video
+American Football | ALL  |Support animation playback, please contact Telegram for audio/video
+Vincent van der Voort | ALL  |Support animation playback, please contact Telegram for audio/video
+Esports | ALL  |Support animation playback, please contact Telegram for audio/video
+Futsal |ALL  |Support animation playback, please contact Telegram for audio/video
+Golf |ALL  |Support animation playback, please contact Telegram for audio/video
+Handball |ALL  |Support animation playback, please contact Telegram for audio/video
+Ice Hockey| ALL  |Support animation playback, please contact Telegram for audio/video
+Table Tennis | ALL  |Support animation playback, please contact Telegram for audio/video
+Volleyball | ALL |Support animation playback, please contact Telegram for audio/video 
+Greyhounds | ALl |Support animation playback, please contact Telegram for audio/video
+Horse Racing |ALL  |Support animation playback, please contact Telegram for audio/video
+Ice Hockey | ALL |Support animation playback, please contact Telegram for audio/video
+Lacrosse | ALL  |Support animation playback, please contact Telegram for audio/video
+NASCAR | ALL  |Support animation playback, please contact Telegram for audio/video
+Volleyball | ALL  |Support animation playback, please contact Telegram for audio/video
+Streaming | NO  |Please contact Telegram for audio/video
+Streaming | NO  |Please contact Telegram for audio/video
 
 Please contact us by Telegram to get token
 
@@ -114,4 +122,407 @@ Please contact us by Telegram to get token
 ### inplay_event_example.json
 ```json
 {"code":0,"channel":"inplay","types":"event","data":[{"topic_id":"OV151194282735C12A_1_3U","detail":[{"tmr_secs":"22","tmr_ticking":"0"}]},{"topic_id":"OV119414381C1A_1_3U","detail":[{"tmr_secs":"9","tmr_updated":"20220515214433"}]},{"topic_id":"OV119414381C151A_1_3U","detail":[{"tmr_secs":"9","tmr_updated":"20220515214433"}]},{"topic_id":"OV119415830-1037616183_1_3U","base_info":{"competition_name":"Canada NBL","competition_id":"119350852C18A_1_3","tag_name":"Basketball","team_name":"Sudbury Five vs KW Titans"},"detail":[{"odds":"20/27"}]},{"topic_id":"OV119415830-1037616179_1_3U","base_info":{"competition_name":"Canada NBL","competition_id":"119350852C18A_1_3","tag_name":"Basketball","team_name":"Sudbury Five vs KW Titans"},"detail":[{"odds":"20/21"}]},{"topic_id":"OV119350852C18A_1_3U","base_info":{"competition_name":"Canada NBL","competition_id":"119350852C18A_1_3","tag_name":"Basketball","team_name":"Sudbury Five vs KW Titans"},"detail":[{"short_score":"85-95","tmr_secs":"13","tmr_updated":"20220515214433"}]},{"topic_id":"OV119414381C1A_1_3U","base_info":{"competition_name":"Canada NBL","competition_id":"119350852C18A_1_3","tag_name":"Basketball","team_name":"Sudbury Five vs KW Titans"},"detail":[{"tmr_secs":"10","tmr_updated":"20220515214434"}]},{"topic_id":"OV119414381C151A_1_3U","base_info":{"competition_name":"Canada NBL","competition_id":"119350852C18A_1_3","tag_name":"Basketball","team_name":"Sudbury Five vs KW Titans"},"detail":[{"tmr_secs":"10","tmr_updated":"20220515214434"}]},{"topic_id":"OV119376265-1033994448_1_3U","base_info":{"competition_name":"Argentina Torneo A","competition_id":"119358840C1A_1_3","tag_name":"Soccer","team_name":"San Martin Formosa v Crucero Del Norte"},"detail":[{"odds":"2/9"}]},{"topic_id":"OV119358840C1A_1_3U","base_info":{"competition_name":"Argentina Torneo A","competition_id":"119358840C1A_1_3","tag_name":"Soccer","team_name":"San Martin Formosa v Crucero Del Norte"},"detail":[{"live_markets":"14"}]},{"topic_id":"OV119428961-1038989876_1_3U","base_info":{"competition_name":"MLB","competition_id":"15155C16A_1_3","tag_name":"Baseball","team_name":"PHI Phillies @ LA Dodgers"},"detail":[{"odds":"1/1"}]},{"topic_id":"OV119428961-1038989875_1_3U","base_info":{"competition_name":"MLB","competition_id":"15155C16A_1_3","tag_name":"Baseball","team_name":"PHI Phillies @ LA Dodgers"},"detail":[{"odds":"10/13"}]},{"topic_id":"OV119428961-1038989875_1_3U","base_info":{"competition_id":"119008631","label_name":"3 or More"},"detail":[{}]}]}
+```
+
+## Inplay detail Example 
+```
+{
+  "code": 0,
+  "channel": "inplay",
+  "types": "detail",
+  "data": [
+    [
+      {
+        "topic_id": "6V119350753C1-G421_1_1",
+        "types": "Match Goals",
+        "order": "1"
+      },
+      {
+        "topic_id": "6V119350753C1-G421-2_1_1",
+        "types": "Over",
+        "order": "1",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031174_1_1",
+            "id": "1034031174",
+            "name": "4.5",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "8/15"
+          }
+        ]
+      },
+      {
+        "topic_id": "6V119350753C1-G421-3_1_1",
+        "types": "Under",
+        "order": "2",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031178_1_1",
+            "id": "1034031178",
+            "name": "4.5",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "11/8"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "topic_id": "6V119350753C1-G12_1_1",
+        "types": "Asian Handicap (0-4)",
+        "order": "2"
+      },
+      {
+        "topic_id": "6V119350753C1-G12-1_1_1",
+        "types": "Llaneros Women",
+        "order": "0",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1043428410_1_1",
+            "id": "1043428410",
+            "name": "+0.5",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "4/5"
+          }
+        ]
+      },
+      {
+        "topic_id": "6V119350753C1-G12-2_1_1",
+        "types": "Independiente Santa Fe Women",
+        "order": "1",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1043428411_1_1",
+            "id": "1043428411",
+            "name": "-0.5",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "1/1"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "topic_id": "6V119350753C1-G15_1_1",
+        "types": "Goal Line (0-4)",
+        "order": "3"
+      },
+      {
+        "topic_id": "6V119350753C1-G15-2_1_1",
+        "types": "Over",
+        "order": "1",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1043442372_1_1",
+            "id": "1043442372",
+            "name": "4.75",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "3/4"
+          }
+        ]
+      },
+      {
+        "topic_id": "6V119350753C1-G15-3_1_1",
+        "types": "Under",
+        "order": "2",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1043442373_1_1",
+            "id": "1043442373",
+            "name": "4.75",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "21/20"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "topic_id": "6V119350753C1G10001_1_1",
+        "types": "Final Score",
+        "order": "4"
+      },
+      {
+        "topic_id": "6V119350753-10001_1_1",
+        "types": "Llaneros Women¬Independiente Santa Fe Women",
+        "order": "0"
+      },
+      {
+        "topic_id": "6V119350753-10001-1_1_1",
+        "types": "1",
+        "order": "1"
+      },
+      {
+        "topic_id": "6V119350753-10001-X_1_1",
+        "types": "X",
+        "order": "2"
+      },
+      {
+        "topic_id": "6V119350753-10001-2_1_1",
+        "types": "2",
+        "order": "3",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031312_1_1",
+            "id": "1034031312",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "11/8"
+          },
+          {
+            "topic_id": "6VP119376475-1034031315_1_1",
+            "id": "1034031315",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "1",
+            "odds": "17/2"
+          },
+          {
+            "topic_id": "6VP119376475-1034031317_1_1",
+            "id": "1034031317",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "2",
+            "odds": "40/1"
+          },
+          {
+            "topic_id": "6VP119376475-1034031321_1_1",
+            "id": "1034031321",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "3",
+            "odds": "2/1"
+          },
+          {
+            "topic_id": "6VP119376475-1034031323_1_1",
+            "id": "1034031323",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "4",
+            "odds": "12/1"
+          },
+          {
+            "topic_id": "6VP119376475-1034031325_1_1",
+            "id": "1034031325",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "5",
+            "odds": "50/1"
+          },
+          {
+            "topic_id": "6VP119376475-1043192342_1_1",
+            "id": "1043192342",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "6",
+            "odds": "11/2"
+          },
+          {
+            "topic_id": "6VP119376475-1043192347_1_1",
+            "id": "1043192347",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "7",
+            "odds": "28/1"
+          },
+          {
+            "topic_id": "6VP119376475-1043192350_1_1",
+            "id": "1043192350",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "8",
+            "odds": "100/1"
+          },
+          {
+            "topic_id": "6VP119376475-1043192351_1_1",
+            "id": "1043192351",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "9",
+            "odds": "18/1"
+          },
+          {
+            "topic_id": "6VP119376475-1043192352_1_1",
+            "id": "1043192352",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "10",
+            "odds": "66/1"
+          },
+          {
+            "topic_id": "6VP119376475-1043192354_1_1",
+            "id": "1043192354",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "11",
+            "odds": "40/1"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "topic_id": "6V119350753C1-G11_1_1",
+        "types": "3-Way Handicap",
+        "order": "5"
+      },
+      {
+        "topic_id": "6V119350753C1-G11-1_1_1",
+        "types": "Llaneros Women",
+        "order": "0",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031230_1_1",
+            "id": "1034031230",
+            "name": "+5",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "8/11"
+          }
+        ]
+      },
+      {
+        "topic_id": "6V119350753C1-G11-3_1_1",
+        "types": "Draw",
+        "order": "1",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031233_1_1",
+            "id": "1034031233",
+            "name": "-5",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "15/8"
+          }
+        ]
+      },
+      {
+        "topic_id": "6V119350753C1-G11-2_1_1",
+        "types": "Independiente Santa Fe Women",
+        "order": "2",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031236_1_1",
+            "id": "1034031236",
+            "name": "-5",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "4/1"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "topic_id": "6V119350753G10564_1_1",
+        "types": "Last Team to Score",
+        "order": "6"
+      },
+      {
+        "topic_id": "6V119350753-10564_1_1",
+        "order": "0",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031409_1_1",
+            "id": "1034031409",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "6/1"
+          },
+          {
+            "topic_id": "6VP119376475-1034031443_1_1",
+            "id": "1034031443",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "1",
+            "odds": "1/12"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "topic_id": "6V119350753C1G10562_1_1",
+        "types": "Goals Odd/Even",
+        "order": "7"
+      },
+      {
+        "topic_id": "6V119350753-10562_1_1",
+        "order": "0",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031390_1_1",
+            "id": "1034031390",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "6/5"
+          },
+          {
+            "topic_id": "6VP119376475-1034031394_1_1",
+            "id": "1034031394",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "1",
+            "odds": "8/13"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "topic_id": "6V119350753C1G50246_1_1",
+        "types": "To Win 2nd Half",
+        "order": "8"
+      },
+      {
+        "topic_id": "6V119350753-50246_1_1",
+        "order": "0",
+        "event": [
+          {
+            "topic_id": "6VP119376475-1034031593_1_1",
+            "id": "1034031593",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "0",
+            "odds": "20/1"
+          },
+          {
+            "topic_id": "6VP119376475-1034031595_1_1",
+            "id": "1034031595",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "1",
+            "odds": "9/1"
+          },
+          {
+            "topic_id": "6V119350753C1U96846224_1_1",
+            "id": "96846224",
+            "fixture_parent_id": "119376475",
+            "suspended": "0",
+            "order": "14",
+            "odds": "1/16"
+          }
+        ]
+      }
+    ]
+  ]
+}
 ```
