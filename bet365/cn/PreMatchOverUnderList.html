@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PreMatchOverUnderList API For Bet365 | bet365Data Documentation | bet365</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script>let htmlElement = document.getElementsByTagName("html")[0];
+    if (localStorage && localStorage['docs.theme']) {
+      htmlElement.className += (htmlElement.className ? ' ' : '') + 'theme-' + localStorage['docs.theme'];
+    }</script>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#f1f5fd">
+    
+    <link rel="preload" href="/assets/css/0.styles.b24c01df.css" as="style"><link rel="preload" href="/assets/js/app.d0ed0da3.js" as="script"><link rel="preload" href="/assets/js/3.56c1cd34.js" as="script"><link rel="preload" href="/assets/js/46.d5d03ab8.js" as="script">
+    <link rel="stylesheet" href="/assets/css/0.styles.b24c01df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div id="nprogress-container"></div> <div class="sidebar-mask"></div> <aside version="bet365" class="left-bar"><div class="wrap"><div id="top" class="h-12 flex items-center"><a href="/" class="site-name font-bold px-4 mt-1 router-link-active">Bet365API</a></div>  <div id="mid" class="relative"><div class="nav-wrap relative w-64 overflow-hidden h-full"><!----> <div class="set-nav"><div class="doc-set-panel"><div class="primary-sets"><a href="/" class="doc-set home router-link-active"><span class="back"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.15625 5.75L4.75 1.125C4.9375 0.9375 5.11458 0.9375 5.28125 1.125L5.90625 1.71875C6.07292 1.90625 6.07292 2.08333 5.90625 2.25L2.1875 6L5.90625 9.75C6.07292 9.91667 6.07292 10.0938 5.90625 10.2812L5.28125 10.875C5.11458 11.0625 4.9375 11.0625 4.75 10.875L0.15625 6.25C-0.0104167 6.08333 -0.0104167 5.91667 0.15625 5.75Z" fill="#718096"></path></svg></span> <span class="mr-2 inline-block relative home-icon"><svg width="18" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3633 7.32617C19.4961 7.43685 19.5625 7.58073 19.5625 7.75781C19.5625 7.89062 19.5182 8.0013 19.4297 8.08984L19.0977 8.48828C18.987 8.62109 18.8542 8.6875 18.6992 8.6875C18.5664 8.6875 18.4557 8.64323 18.3672 8.55469L17.4375 7.82422V14C17.4375 14.2878 17.3268 14.5312 17.1055 14.7305C16.9062 14.9518 16.6628 15.0625 16.375 15.0625H12.125C11.8372 15.0625 11.5827 14.9518 11.3613 14.7305C11.1621 14.5312 11.0625 14.2878 11.0625 14V10.5469H8.9375V14C8.9375 14.2878 8.82682 14.5312 8.60547 14.7305C8.40625 14.9518 8.16276 15.0625 7.875 15.0625H3.625C3.33724 15.0625 3.08268 14.9518 2.86133 14.7305C2.66211 14.5312 2.5625 14.2878 2.5625 14V7.82422L1.66602 8.55469C1.55534 8.64323 1.43359 8.6875 1.30078 8.6875C1.14583 8.6875 1.01302 8.62109 0.902344 8.48828L0.570312 8.08984C0.481771 7.97917 0.4375 7.86849 0.4375 7.75781C0.4375 7.58073 0.503906 7.43685 0.636719 7.32617L8.80469 0.619141C9.15885 0.33138 9.55729 0.1875 10 0.1875C10.4427 0.1875 10.8411 0.33138 11.1953 0.619141L19.3633 7.32617ZM15.8438 13.4688V6.49609L10 1.71484L4.15625 6.49609V13.4688H7.34375V10.0156C7.34375 9.72786 7.44336 9.48438 7.64258 9.28516C7.86393 9.0638 8.11849 8.95312 8.40625 8.95312H11.5938C11.8815 8.95312 12.125 9.0638 12.3242 9.28516C12.5456 9.48438 12.6562 9.72786 12.6562 10.0156V13.4688H15.8438Z" fill="#4A7CF6"></path></svg></span> <span class="home-title">Home</span></a> <!----></div> <div class="doc-set-current"><a href="/bet365/" class="flex items-center router-link-active"><span class="icon mr-3 inline-block"><img src="/icons/Bet365_Logo.svg" width="28" height="28" alt=""></span> <div class="title leading-none font-medium">Bet365</div></a> <div class="doc-set-version-wrapper"><select name class="doc-set-version"><option value="bet365" selected="selected">bet365</option><option value="bet188">bet188</option></select> <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="version-arrow absolute"><path d="M5.07812 6.07031L0.742188 1.76367C0.566406 1.58789 0.566406 1.42188 0.742188 1.26562L1.29883 0.679688C1.47461 0.523438 1.64062 0.523438 1.79688 0.679688L5.3125 4.16602L8.82812 0.679688C8.98438 0.523438 9.15039 0.523438 9.32617 0.679688L9.88281 1.26562C10.0586 1.42188 10.0586 1.58789 9.88281 1.76367L5.54688 6.07031C5.39062 6.22656 5.23438 6.22656 5.07812 6.07031Z" fill="#718096"></path></svg></div></div></div> <div class="loading-bars ml-4 mt-1"><div class="bar heavier animated"></div> <div class="bar animated w-24"></div> <div class="bar animated"></div> <div class="bar animated"></div> <div class="bar animated"></div> <div class="bar animated"></div></div> <!----> <!----></div></div></div>  <!----></div></aside> <div id="main" class="main-container"><div id="top-bar" class="top-bar"><button class="nav-hamburger"><span></span> <span></span> <span></span></button> <div class="ml-12 lg:ml-0 lg:block max-w-screen-md h-full flex items-center"><div class="search-box relative w-full"><input aria-label="Search" placeholder="Search the bet365Data docs (Press “/” to focus)" autocomplete="off" spellcheck="false" value="" class="rounded-md w-full px-5 py-2 text-sm"> <!----></div></div></div> <main heading-items="[object Object]" class="page"> <div id="content" class="theme-default-content content__default"><div class="pre-heading"><!----></div> <h1>PreMatchOverUnderList API For Bet365</h1> <div class="post-heading"><!----> <!----></div> <h3 id="_1-请求地址"><a href="#_1-请求地址" class="header-anchor">#</a> 1) 请求地址</h3> <blockquote><p>http://api.bet365data.com/bet365/preMatch/overUnder?LangCode=1</p></blockquote> <h3 id="_2-调用方式-http-get"><a href="#_2-调用方式-http-get" class="header-anchor">#</a> 2) 调用方式：HTTP get</h3> <h3 id="_3-接口描述"><a href="#_3-接口描述" class="header-anchor">#</a> 3) 接口描述：</h3> <ul><li>接口描述详情</li></ul> <h3 id="_4-请求参数"><a href="#_4-请求参数" class="header-anchor">#</a> 4) 请求参数:</h3> <h4 id="get参数"><a href="#get参数" class="header-anchor">#</a> GET参数:</h4> <div class="table"><table><thead><tr><th>字段名称</th> <th style="text-align:center;">字段说明</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">必填</th> <th style="text-align:right;">备注</th></tr></thead> <tbody><tr><td>LangCode</td> <td style="text-align:center;">比赛语言</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N（默认为1英语）</td> <td style="text-align:right;">详见LangCodeModel</td></tr></tbody></table></div> <h4 id="langcodemodel"><a href="#langcodemodel" class="header-anchor">#</a> LangCodeModel:</h4> <div class="table"><table><thead><tr><th style="text-align:left;">LangType</th> <th style="text-align:center;">LangCode</th> <th style="text-align:center;">备注</th></tr></thead> <tbody><tr><td style="text-align:left;">English</td> <td style="text-align:center;">1</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">繁體中文</td> <td style="text-align:center;">2</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Español</td> <td style="text-align:center;">3</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Deutsch</td> <td style="text-align:center;">5</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Italiano</td> <td style="text-align:center;">6</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Dansk</td> <td style="text-align:center;">7</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Svenska</td> <td style="text-align:center;">8</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Norsk</td> <td style="text-align:center;">9</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">简体中文</td> <td style="text-align:center;">10</td> <td style="text-align:center;"></td></tr> <tr><td style="text-align:left;">Български</td> <td style="text-align:center;">19</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Ελληνικά</td> <td style="text-align:center;">20</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Polski</td> <td style="text-align:center;">21</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Português</td> <td style="text-align:center;">22</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Română</td> <td style="text-align:center;">23</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Česky</td> <td style="text-align:center;">24</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Magyar</td> <td style="text-align:center;">25</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Slovenčina</td> <td style="text-align:center;">26</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Nederlands</td> <td style="text-align:center;">28</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Eesti</td> <td style="text-align:center;">29</td> <td style="text-align:center;">-</td></tr> <tr><td style="text-align:left;">Русский</td> <td style="text-align:center;">31</td> <td style="text-align:center;">-</td></tr></tbody></table></div> <h4 id="get参数-2"><a href="#get参数-2" class="header-anchor">#</a> GET参数:</h4> <div class="table"><table><thead><tr><th>字段名称</th> <th style="text-align:center;">字段说明</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">必填</th> <th style="text-align:right;">备注</th></tr></thead> <tbody><tr><td>Code</td> <td style="text-align:center;">interface code status</td> <td style="text-align:center;">int</td> <td style="text-align:center;">N</td> <td style="text-align:right;">详见CodeModel</td></tr> <tr><td>Data</td> <td style="text-align:center;">比赛信息</td> <td style="text-align:center;">DataModel</td> <td style="text-align:center;">N</td> <td style="text-align:right;">详见DataModel</td></tr> <tr><td>Msg</td> <td style="text-align:center;">interface code message</td> <td style="text-align:center;">MsgModel</td> <td style="text-align:center;">N</td> <td style="text-align:right;">-</td></tr></tbody></table></div> <h4 id="datamodel参数"><a href="#datamodel参数" class="header-anchor">#</a> DataModel参数:</h4> <div class="table"><table><thead><tr><th>字段名称</th> <th style="text-align:left;">字段说明</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">必填</th> <th style="text-align:right;">备注</th></tr></thead> <tbody><tr><td>List</td> <td style="text-align:left;">比赛列表信息</td> <td style="text-align:center;">Array</td> <td style="text-align:center;">N</td> <td style="text-align:right;">详见ListModel</td></tr> <tr><td>Total</td> <td style="text-align:left;">比赛数量总计</td> <td style="text-align:center;">int</td> <td style="text-align:center;">N</td> <td style="text-align:right;">-</td></tr> <tr><td>Channel</td> <td style="text-align:left;">当前市场名称</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:right;">-</td></tr> <tr><td>SyncTime</td> <td style="text-align:left;">数据同步时间</td> <td style="text-align:center;">int64</td> <td style="text-align:center;">N</td> <td style="text-align:right;">-</td></tr></tbody></table></div> <h4 id="listmodel"><a href="#listmodel" class="header-anchor">#</a> ListModel:</h4> <div class="table"><table><thead><tr><th>字段名称</th> <th style="text-align:left;">字段说明</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">必填</th> <th style="text-align:left;">备注</th></tr></thead> <tbody><tr><td>TeamID</td> <td style="text-align:left;">比赛队伍唯一ID</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见ListModel</td></tr> <tr><td>TeamIt</td> <td style="text-align:left;">可用于下单</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">比赛数量总计</td></tr> <tr><td>TeamMr</td> <td style="text-align:left;">比赛热度</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见LangCodeModel</td></tr> <tr><td>TeamName</td> <td style="text-align:left;">队伍名称</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见LangCodeModel</td></tr> <tr><td>Fi</td> <td style="text-align:left;">当前比赛唯一ID</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见LangCodeModel可用于查询比赛完整详细信息</td></tr> <tr><td>Pd</td> <td style="text-align:left;">详细页面地址</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">域名+当前信息即可进入官网详细比赛页面</td></tr> <tr><td>Bc</td> <td style="text-align:left;">比赛时间</td> <td style="text-align:center;">int64</td> <td style="text-align:center;">N</td> <td style="text-align:left;">比赛时间跟地区有关系</td></tr> <tr><td>League</td> <td style="text-align:left;">联盟名称</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见LangCodeModel</td></tr> <tr><td>Over</td> <td style="text-align:left;">大Object</td> <td style="text-align:center;">N</td> <td style="text-align:center;">详见OverModel</td> <td style="text-align:left;"></td></tr> <tr><td>Under</td> <td style="text-align:left;">小</td> <td style="text-align:center;">Object</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见UnderModel</td></tr> <tr><td>Vi</td> <td style="text-align:left;">是否有直播</td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">0为不可用，1为可用</td></tr></tbody></table></div> <h4 id="overmodel参数"><a href="#overmodel参数" class="header-anchor">#</a> OverModel参数:</h4> <div class="table"><table><thead><tr><th>字段名称</th> <th style="text-align:left;">字段说明</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">必填</th> <th style="text-align:right;">备注</th></tr></thead> <tbody><tr><td>Types</td> <td style="text-align:left;"></td> <td style="text-align:center;">int</td> <td style="text-align:center;">N</td> <td style="text-align:right;">详见ListModel</td></tr> <tr><td>ID</td> <td style="text-align:left;"></td> <td style="text-align:center;">int</td> <td style="text-align:center;">N</td> <td style="text-align:right;">比赛数量总计</td></tr> <tr><td>Fi</td> <td style="text-align:left;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:right;">详见LangCodeModel</td></tr> <tr><td>Odd</td> <td style="text-align:left;"></td> <td style="text-align:center;">int64</td> <td style="text-align:center;">N</td> <td style="text-align:right;">详见LangCodeModel</td></tr></tbody></table></div> <h4 id="undermodel参数"><a href="#undermodel参数" class="header-anchor">#</a> UnderModel参数:</h4> <div class="table"><table><thead><tr><th>字段名称</th> <th style="text-align:left;">字段说明</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">必填</th> <th style="text-align:left;">备注</th></tr></thead> <tbody><tr><td>Types</td> <td style="text-align:left;"></td> <td style="text-align:center;">int</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见ListModel</td></tr> <tr><td>ID</td> <td style="text-align:left;"></td> <td style="text-align:center;">int</td> <td style="text-align:center;">N</td> <td style="text-align:left;">比赛数量总计</td></tr> <tr><td>Fi</td> <td style="text-align:left;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见LangCodeModel</td></tr> <tr><td>Odd</td> <td style="text-align:left;"></td> <td style="text-align:center;">int64</td> <td style="text-align:center;">N</td> <td style="text-align:left;">详见LangCodeModel</td></tr></tbody></table></div> <h3 id="_5-请求返回结果"><a href="#_5-请求返回结果" class="header-anchor">#</a> 5) 请求返回结果:</h3> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;code&quot;: 0,
+    &quot;data&quot;: {
+        &quot;list&quot;: [
+            {
+                &quot;team_id&quot;: &quot;PC1845689814&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293273F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Pakhtakor Tashkent Women v AGMK Women&quot;,
+                &quot;fi&quot;: &quot;104293273&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293273/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622083000&quot;,
+                &quot;league&quot;: &quot;Uzbekistan League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845689814&quot;,
+                    &quot;fi&quot;: &quot;104293273&quot;,
+                    &quot;odd&quot;: &quot;1.222&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845689820&quot;,
+                    &quot;fi&quot;: &quot;104293273&quot;,
+                    &quot;odd&quot;: &quot;4.200&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1846409767&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104303773F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Rakow II Czestochowa v Odra Wodzislaw&quot;,
+                &quot;fi&quot;: &quot;104303773&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104303773/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;Poland IV Liga&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1846409767&quot;,
+                    &quot;fi&quot;: &quot;104303773&quot;,
+                    &quot;odd&quot;: &quot;1.500&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1846409769&quot;,
+                    &quot;fi&quot;: &quot;104303773&quot;,
+                    &quot;odd&quot;: &quot;2.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844283528&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104269213F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Paro FC v Paro Rinpung FC&quot;,
+                &quot;fi&quot;: &quot;104269213&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104269213/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622100000&quot;,
+                &quot;league&quot;: &quot;Bhutan Premier League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844283528&quot;,
+                    &quot;fi&quot;: &quot;104269213&quot;,
+                    &quot;odd&quot;: &quot;1.182&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844283529&quot;,
+                    &quot;fi&quot;: &quot;104269213&quot;,
+                    &quot;odd&quot;: &quot;4.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843258693&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104255849F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Bohemians Dublin v Shamrock Rovers&quot;,
+                &quot;fi&quot;: &quot;104255849&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104255849/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621194500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Republic of Ireland Premier Division&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843258693&quot;,
+                    &quot;fi&quot;: &quot;104255849&quot;,
+                    &quot;odd&quot;: &quot;2.150&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843258698&quot;,
+                    &quot;fi&quot;: &quot;104255849&quot;,
+                    &quot;odd&quot;: &quot;1.667&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845685252&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293137F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Fortis FC v Kawran Bazar Progoti&quot;,
+                &quot;fi&quot;: &quot;104293137&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293137/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Bangladesh Championship League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845685252&quot;,
+                    &quot;fi&quot;: &quot;104293137&quot;,
+                    &quot;odd&quot;: &quot;2.750&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845685256&quot;,
+                    &quot;fi&quot;: &quot;104293137&quot;,
+                    &quot;odd&quot;: &quot;1.425&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1826835166&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104028576F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;19&quot;,
+                &quot;team_name&quot;: &quot;FC Astana v Ordabasy Shymkent&quot;,
+                &quot;fi&quot;: &quot;104028576&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104028576/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Kazakhstan Premier League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1826835166&quot;,
+                    &quot;fi&quot;: &quot;104028576&quot;,
+                    &quot;odd&quot;: &quot;1.900&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1826835170&quot;,
+                    &quot;fi&quot;: &quot;104028576&quot;,
+                    &quot;odd&quot;: &quot;1.900&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1846328917&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104302889F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;1. FC Burg v SG Aumund Vegesack&quot;,
+                &quot;fi&quot;: &quot;104302889&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104302889/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;league&quot;: &quot;Germany Landespokal&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1846328917&quot;,
+                    &quot;fi&quot;: &quot;104302889&quot;,
+                    &quot;odd&quot;: &quot;1.444&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1846328920&quot;,
+                    &quot;fi&quot;: &quot;104302889&quot;,
+                    &quot;odd&quot;: &quot;2.700&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845688371&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293242F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;FK Yenisey Women v Krasnodar Women&quot;,
+                &quot;fi&quot;: &quot;104293242&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293242/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622090000&quot;,
+                &quot;league&quot;: &quot;Russia Premier Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845688371&quot;,
+                    &quot;fi&quot;: &quot;104293242&quot;,
+                    &quot;odd&quot;: &quot;1.900&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845688376&quot;,
+                    &quot;fi&quot;: &quot;104293242&quot;,
+                    &quot;odd&quot;: &quot;1.900&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838929913&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104189993F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Politecnico J.I.C. v Inder Girardota&quot;,
+                &quot;fi&quot;: &quot;104189993&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104189993/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Colombia Regional League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838929913&quot;,
+                    &quot;fi&quot;: &quot;104189993&quot;,
+                    &quot;odd&quot;: &quot;1.650&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838929916&quot;,
+                    &quot;fi&quot;: &quot;104189993&quot;,
+                    &quot;odd&quot;: &quot;2.200&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845689659&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293269F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Navbahor Women v Sevinch Women&quot;,
+                &quot;fi&quot;: &quot;104293269&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293269/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622083000&quot;,
+                &quot;league&quot;: &quot;Uzbekistan League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845689659&quot;,
+                    &quot;fi&quot;: &quot;104293269&quot;,
+                    &quot;odd&quot;: &quot;1.182&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845689660&quot;,
+                    &quot;fi&quot;: &quot;104293269&quot;,
+                    &quot;odd&quot;: &quot;4.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838018017&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104180480F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;23&quot;,
+                &quot;team_name&quot;: &quot;UAI Urquiza Women v River Plate Women&quot;,
+                &quot;fi&quot;: &quot;104180480&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104180480/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Argentina Championship Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838018017&quot;,
+                    &quot;fi&quot;: &quot;104180480&quot;,
+                    &quot;odd&quot;: &quot;1.533&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838018018&quot;,
+                    &quot;fi&quot;: &quot;104180480&quot;,
+                    &quot;odd&quot;: &quot;2.400&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843684608&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104261963F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Rayon Sports v Espoir FC&quot;,
+                &quot;fi&quot;: &quot;104261963&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104261963/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Rwanda National League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843684608&quot;,
+                    &quot;fi&quot;: &quot;104261963&quot;,
+                    &quot;odd&quot;: &quot;1.950&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843684616&quot;,
+                    &quot;fi&quot;: &quot;104261963&quot;,
+                    &quot;odd&quot;: &quot;1.850&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843374121&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104257477F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Cortulua v Deportes Quindio&quot;,
+                &quot;fi&quot;: &quot;104257477&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104257477/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621220000&quot;,
+                &quot;league&quot;: &quot;Colombia Primera B&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843374121&quot;,
+                    &quot;fi&quot;: &quot;104257477&quot;,
+                    &quot;odd&quot;: &quot;2.100&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843374126&quot;,
+                    &quot;fi&quot;: &quot;104257477&quot;,
+                    &quot;odd&quot;: &quot;1.700&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838097542&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104181189F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;23&quot;,
+                &quot;team_name&quot;: &quot;Throttur Reykjavik Women v Fylkir Reykjavik Women&quot;,
+                &quot;fi&quot;: &quot;104181189&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104181189/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621210000&quot;,
+                &quot;league&quot;: &quot;Iceland Premier League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838097542&quot;,
+                    &quot;fi&quot;: &quot;104181189&quot;,
+                    &quot;odd&quot;: &quot;1.400&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838097556&quot;,
+                    &quot;fi&quot;: &quot;104181189&quot;,
+                    &quot;odd&quot;: &quot;2.875&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1805865455&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103740845F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;16&quot;,
+                &quot;team_name&quot;: &quot;Olympic Kingsway v UWA-Nedlands FC&quot;,
+                &quot;fi&quot;: &quot;103740845&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103740845/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622123000&quot;,
+                &quot;league&quot;: &quot;Australia Western Australia State League 1&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1805865455&quot;,
+                    &quot;fi&quot;: &quot;103740845&quot;,
+                    &quot;odd&quot;: &quot;1.444&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1805865456&quot;,
+                    &quot;fi&quot;: &quot;103740845&quot;,
+                    &quot;odd&quot;: &quot;2.700&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838289774&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104183446F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;23&quot;,
+                &quot;team_name&quot;: &quot;Santa Cruz RJ v Buzios&quot;,
+                &quot;fi&quot;: &quot;104183446&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104183446/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621190000&quot;,
+                &quot;league&quot;: &quot;Brazil Campeonato Carioca C&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838289774&quot;,
+                    &quot;fi&quot;: &quot;104183446&quot;,
+                    &quot;odd&quot;: &quot;1.650&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838289778&quot;,
+                    &quot;fi&quot;: &quot;104183446&quot;,
+                    &quot;odd&quot;: &quot;2.200&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844151925&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267568F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;MODFX (MOD) Esports v Im Not Over (PNZ) Esports&quot;,
+                &quot;fi&quot;: &quot;104267568&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267568/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844151925&quot;,
+                    &quot;fi&quot;: &quot;104267568&quot;,
+                    &quot;odd&quot;: &quot;1.170&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844151940&quot;,
+                    &quot;fi&quot;: &quot;104267568&quot;,
+                    &quot;odd&quot;: &quot;4.600&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844151992&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267570F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Tahcop73 (TAH) Esports v BlueMountState (BMS) Esports&quot;,
+                &quot;fi&quot;: &quot;104267570&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267570/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621172500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844151992&quot;,
+                    &quot;fi&quot;: &quot;104267570&quot;,
+                    &quot;odd&quot;: &quot;1.220&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844151993&quot;,
+                    &quot;fi&quot;: &quot;104267570&quot;,
+                    &quot;odd&quot;: &quot;3.900&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844571017&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104273603F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Hapoel Ramot Menashe v Hapoel Sandala Gilboa&quot;,
+                &quot;fi&quot;: &quot;104273603&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104273603/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Israel Liga Bet North&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844571017&quot;,
+                    &quot;fi&quot;: &quot;104273603&quot;,
+                    &quot;odd&quot;: &quot;1.364&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844571018&quot;,
+                    &quot;fi&quot;: &quot;104273603&quot;,
+                    &quot;odd&quot;: &quot;3.100&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838097168&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104181184F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;23&quot;,
+                &quot;team_name&quot;: &quot;Valur Reykjavik Women v Thor/KA Akureyri Women&quot;,
+                &quot;fi&quot;: &quot;104181184&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104181184/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621190000&quot;,
+                &quot;league&quot;: &quot;Iceland Premier League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838097168&quot;,
+                    &quot;fi&quot;: &quot;104181184&quot;,
+                    &quot;odd&quot;: &quot;1.300&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838097173&quot;,
+                    &quot;fi&quot;: &quot;104181184&quot;,
+                    &quot;odd&quot;: &quot;3.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1803870841&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103708415F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Valerenga 2 v Baerum&quot;,
+                &quot;fi&quot;: &quot;103708415&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103708415/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;league&quot;: &quot;Norway Division 2 Group 1&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1803870841&quot;,
+                    &quot;fi&quot;: &quot;103708415&quot;,
+                    &quot;odd&quot;: &quot;1.571&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1803870842&quot;,
+                    &quot;fi&quot;: &quot;103708415&quot;,
+                    &quot;odd&quot;: &quot;2.350&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844152878&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267588F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Saturn Rama (SAT) Esports v MODFX (MOD) Esports&quot;,
+                &quot;fi&quot;: &quot;104267588&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267588/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621181500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844152878&quot;,
+                    &quot;fi&quot;: &quot;104267588&quot;,
+                    &quot;odd&quot;: &quot;1.190&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844152883&quot;,
+                    &quot;fi&quot;: &quot;104267588&quot;,
+                    &quot;odd&quot;: &quot;4.300&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843684516&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104261959F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;19&quot;,
+                &quot;team_name&quot;: &quot;Marines FC v Bugesera&quot;,
+                &quot;fi&quot;: &quot;104261959&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104261959/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Rwanda National League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843684516&quot;,
+                    &quot;fi&quot;: &quot;104261959&quot;,
+                    &quot;odd&quot;: &quot;2.425&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843684517&quot;,
+                    &quot;fi&quot;: &quot;104261959&quot;,
+                    &quot;odd&quot;: &quot;1.525&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845862898&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104296014F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Bayern (Zaha) Esports v Real Madrid (PrinceV) Esports&quot;,
+                &quot;fi&quot;: &quot;104296014&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104296014/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621171200&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Battle - 8 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845862898&quot;,
+                    &quot;fi&quot;: &quot;104296014&quot;,
+                    &quot;odd&quot;: &quot;1.180&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845862908&quot;,
+                    &quot;fi&quot;: &quot;104296014&quot;,
+                    &quot;odd&quot;: &quot;4.450&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844158974&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267694F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Russia Today (RUS) Esports v Fints (FIN) Esports&quot;,
+                &quot;fi&quot;: &quot;104267694&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267694/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844158974&quot;,
+                    &quot;fi&quot;: &quot;104267694&quot;,
+                    &quot;odd&quot;: &quot;1.260&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844158981&quot;,
+                    &quot;fi&quot;: &quot;104267694&quot;,
+                    &quot;odd&quot;: &quot;3.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838725689&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104187330F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Eskilstuna Utd Women v Linköpings FC Women&quot;,
+                &quot;fi&quot;: &quot;104187330&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104187330/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Sweden Damallsvenskan&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838725689&quot;,
+                    &quot;fi&quot;: &quot;104187330&quot;,
+                    &quot;odd&quot;: &quot;1.850&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838725690&quot;,
+                    &quot;fi&quot;: &quot;104187330&quot;,
+                    &quot;odd&quot;: &quot;1.950&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1840923252&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104220913F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Bjorninn v KA Asvellir&quot;,
+                &quot;fi&quot;: &quot;104220913&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104220913/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621213000&quot;,
+                &quot;league&quot;: &quot;Iceland 4 Deild&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1840923252&quot;,
+                    &quot;fi&quot;: &quot;104220913&quot;,
+                    &quot;odd&quot;: &quot;1.222&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1840923257&quot;,
+                    &quot;fi&quot;: &quot;104220913&quot;,
+                    &quot;odd&quot;: &quot;4.200&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845689339&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293261F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;19&quot;,
+                &quot;team_name&quot;: &quot;Tanzania Prisons v Coastal Union&quot;,
+                &quot;fi&quot;: &quot;104293261&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293261/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Tanzania Premier League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845689339&quot;,
+                    &quot;fi&quot;: &quot;104293261&quot;,
+                    &quot;odd&quot;: &quot;2.750&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845689348&quot;,
+                    &quot;fi&quot;: &quot;104293261&quot;,
+                    &quot;odd&quot;: &quot;1.425&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845145196&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104283308F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;63&quot;,
+                &quot;team_name&quot;: &quot;Johor Darul Takzim v Nagoya Grampus&quot;,
+                &quot;fi&quot;: &quot;104283308&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104283308/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;AFC Champions League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845145196&quot;,
+                    &quot;fi&quot;: &quot;104283308&quot;,
+                    &quot;odd&quot;: &quot;1.571&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845145197&quot;,
+                    &quot;fi&quot;: &quot;104283308&quot;,
+                    &quot;odd&quot;: &quot;2.350&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1805535844&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103735032F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;27&quot;,
+                &quot;team_name&quot;: &quot;Santa Cruz FC v Jacuipense&quot;,
+                &quot;fi&quot;: &quot;103735032&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103735032/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622000000&quot;,
+                &quot;league&quot;: &quot;Brazil Serie C&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1805535844&quot;,
+                    &quot;fi&quot;: &quot;103735032&quot;,
+                    &quot;odd&quot;: &quot;2.350&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1805535845&quot;,
+                    &quot;fi&quot;: &quot;103735032&quot;,
+                    &quot;odd&quot;: &quot;1.571&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1733811030&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E102765211F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;147&quot;,
+                &quot;team_name&quot;: &quot;Uruguay v Chile&quot;,
+                &quot;fi&quot;: &quot;102765211&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E102765211/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621220000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Copa America&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1733811030&quot;,
+                    &quot;fi&quot;: &quot;102765211&quot;,
+                    &quot;odd&quot;: &quot;2.500&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1733811031&quot;,
+                    &quot;fi&quot;: &quot;102765211&quot;,
+                    &quot;odd&quot;: &quot;1.533&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845690411&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293290F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Sogdiana Women v Metalourg Bekabad Women&quot;,
+                &quot;fi&quot;: &quot;104293290&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293290/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622083000&quot;,
+                &quot;league&quot;: &quot;Uzbekistan League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845690411&quot;,
+                    &quot;fi&quot;: &quot;104293290&quot;,
+                    &quot;odd&quot;: &quot;1.143&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845690415&quot;,
+                    &quot;fi&quot;: &quot;104293290&quot;,
+                    &quot;odd&quot;: &quot;5.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1805330378&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103731381F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Vikingur Reykjavik v KR Reykjavik&quot;,
+                &quot;fi&quot;: &quot;103731381&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103731381/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621201500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Iceland Premier League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1805330378&quot;,
+                    &quot;fi&quot;: &quot;103731381&quot;,
+                    &quot;odd&quot;: &quot;1.900&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1805330382&quot;,
+                    &quot;fi&quot;: &quot;103731381&quot;,
+                    &quot;odd&quot;: &quot;1.900&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1784064109&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103437925F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;91&quot;,
+                &quot;team_name&quot;: &quot;Atletico Mineiro v Chapecoense&quot;,
+                &quot;fi&quot;: &quot;103437925&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103437925/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622000000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Brazil Serie A&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1784064109&quot;,
+                    &quot;fi&quot;: &quot;103437925&quot;,
+                    &quot;odd&quot;: &quot;1.750&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1784064116&quot;,
+                    &quot;fi&quot;: &quot;103437925&quot;,
+                    &quot;odd&quot;: &quot;2.050&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1833647123&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104124137F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;23&quot;,
+                &quot;team_name&quot;: &quot;Wallidan FC v Elite United&quot;,
+                &quot;fi&quot;: &quot;104124137&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104124137/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;league&quot;: &quot;Gambia GFA League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1833647123&quot;,
+                    &quot;fi&quot;: &quot;104124137&quot;,
+                    &quot;odd&quot;: &quot;2.700&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1833647124&quot;,
+                    &quot;fi&quot;: &quot;104124137&quot;,
+                    &quot;odd&quot;: &quot;1.444&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845685777&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293153F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;2&quot;,
+                &quot;team_name&quot;: &quot;Pohja-Tallinna JK Volta U19 v JK Viljandi Tulevik U19&quot;,
+                &quot;fi&quot;: &quot;104293153&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293153/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;Estonia U19 League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845685777&quot;,
+                    &quot;fi&quot;: &quot;104293153&quot;,
+                    &quot;odd&quot;: &quot;1.140&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845685780&quot;,
+                    &quot;fi&quot;: &quot;104293153&quot;,
+                    &quot;odd&quot;: &quot;5.750&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845528930&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104290184F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;FC Inter Nouakchott v AS Douanes Nouakchott&quot;,
+                &quot;fi&quot;: &quot;104290184&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104290184/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;league&quot;: &quot;Mauritania Division 2&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845528930&quot;,
+                    &quot;fi&quot;: &quot;104290184&quot;,
+                    &quot;odd&quot;: &quot;1.950&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845528931&quot;,
+                    &quot;fi&quot;: &quot;104290184&quot;,
+                    &quot;odd&quot;: &quot;1.850&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844732659&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104276038F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Utah Arrows SC Women v Utah Surf Women&quot;,
+                &quot;fi&quot;: &quot;104276038&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104276038/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622020000&quot;,
+                &quot;league&quot;: &quot;USA WPSL Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844732659&quot;,
+                    &quot;fi&quot;: &quot;104276038&quot;,
+                    &quot;odd&quot;: &quot;1.150&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844732667&quot;,
+                    &quot;fi&quot;: &quot;104276038&quot;,
+                    &quot;odd&quot;: &quot;5.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1826594591&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104023906F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;19&quot;,
+                &quot;team_name&quot;: &quot;Athletic Bilbao Women v Barcelona Women&quot;,
+                &quot;fi&quot;: &quot;104023906&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104023906/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;Spain Primera Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1826594591&quot;,
+                    &quot;fi&quot;: &quot;104023906&quot;,
+                    &quot;odd&quot;: &quot;1.090&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1826594592&quot;,
+                    &quot;fi&quot;: &quot;104023906&quot;,
+                    &quot;odd&quot;: &quot;7.800&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845861870&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104295998F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Real Madrid (PrinceV) Esports v Barcelona (Sinner2k) Esports&quot;,
+                &quot;fi&quot;: &quot;104295998&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104295998/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;league&quot;: &quot;Esoccer Battle - 8 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845861870&quot;,
+                    &quot;fi&quot;: &quot;104295998&quot;,
+                    &quot;odd&quot;: &quot;1.130&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845861876&quot;,
+                    &quot;fi&quot;: &quot;104295998&quot;,
+                    &quot;odd&quot;: &quot;5.400&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843374245&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104257479F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;SV Centro Social Dep Barber v SV SUBT&quot;,
+                &quot;fi&quot;: &quot;104257479&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104257479/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622010000&quot;,
+                &quot;league&quot;: &quot;Curacao League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843374245&quot;,
+                    &quot;fi&quot;: &quot;104257479&quot;,
+                    &quot;odd&quot;: &quot;1.400&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843374246&quot;,
+                    &quot;fi&quot;: &quot;104257479&quot;,
+                    &quot;odd&quot;: &quot;2.850&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845864250&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104296031F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Liverpool (Muromets) Esports v Bayern (Zaha) Esports&quot;,
+                &quot;fi&quot;: &quot;104296031&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104296031/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621172400&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Battle - 8 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845864250&quot;,
+                    &quot;fi&quot;: &quot;104296031&quot;,
+                    &quot;odd&quot;: &quot;1.190&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845864251&quot;,
+                    &quot;fi&quot;: &quot;104296031&quot;,
+                    &quot;odd&quot;: &quot;4.300&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845145117&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104283304F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;63&quot;,
+                &quot;team_name&quot;: &quot;Rachaburi FC v Pohang Steelers&quot;,
+                &quot;fi&quot;: &quot;104283304&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104283304/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622110000&quot;,
+                &quot;league&quot;: &quot;AFC Champions League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845145117&quot;,
+                    &quot;fi&quot;: &quot;104283304&quot;,
+                    &quot;odd&quot;: &quot;1.600&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845145121&quot;,
+                    &quot;fi&quot;: &quot;104283304&quot;,
+                    &quot;odd&quot;: &quot;2.300&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1846332742&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104302919F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;FC Roland Bremen 2011 v Brinkumer SV&quot;,
+                &quot;fi&quot;: &quot;104302919&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104302919/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;league&quot;: &quot;Germany Landespokal&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1846332742&quot;,
+                    &quot;fi&quot;: &quot;104302919&quot;,
+                    &quot;odd&quot;: &quot;1.125&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1846332774&quot;,
+                    &quot;fi&quot;: &quot;104302919&quot;,
+                    &quot;odd&quot;: &quot;6.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845685746&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293151F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;2&quot;,
+                &quot;team_name&quot;: &quot;Keila JK U19 v JK Nomme United U19&quot;,
+                &quot;fi&quot;: &quot;104293151&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293151/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;Estonia U19 League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845685746&quot;,
+                    &quot;fi&quot;: &quot;104293151&quot;,
+                    &quot;odd&quot;: &quot;1.140&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845685747&quot;,
+                    &quot;fi&quot;: &quot;104293151&quot;,
+                    &quot;odd&quot;: &quot;5.750&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838926032&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104189930F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;18&quot;,
+                &quot;team_name&quot;: &quot;CD Los Del Sur v Sellos Colombianos&quot;,
+                &quot;fi&quot;: &quot;104189930&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104189930/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621174500&quot;,
+                &quot;league&quot;: &quot;Colombia Regional League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838926032&quot;,
+                    &quot;fi&quot;: &quot;104189930&quot;,
+                    &quot;odd&quot;: &quot;1.500&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838926033&quot;,
+                    &quot;fi&quot;: &quot;104189930&quot;,
+                    &quot;odd&quot;: &quot;2.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844158664&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267683F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Confession (CFI) Esports v Trader FC (TRD) Esports&quot;,
+                &quot;fi&quot;: &quot;104267683&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267683/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844158664&quot;,
+                    &quot;fi&quot;: &quot;104267683&quot;,
+                    &quot;odd&quot;: &quot;1.150&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844158667&quot;,
+                    &quot;fi&quot;: &quot;104267683&quot;,
+                    &quot;odd&quot;: &quot;5.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838097880&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104181191F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;23&quot;,
+                &quot;team_name&quot;: &quot;Selfoss Women v Breidablik Women&quot;,
+                &quot;fi&quot;: &quot;104181191&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104181191/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621210000&quot;,
+                &quot;league&quot;: &quot;Iceland Premier League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838097880&quot;,
+                    &quot;fi&quot;: &quot;104181191&quot;,
+                    &quot;odd&quot;: &quot;1.250&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838097891&quot;,
+                    &quot;fi&quot;: &quot;104181191&quot;,
+                    &quot;odd&quot;: &quot;4.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1805272261&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103730336F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;78&quot;,
+                &quot;team_name&quot;: &quot;GIF Sundsvall v Västerås SK FK&quot;,
+                &quot;fi&quot;: &quot;103730336&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103730336/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Sweden Superettan&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1805272261&quot;,
+                    &quot;fi&quot;: &quot;103730336&quot;,
+                    &quot;odd&quot;: &quot;1.650&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1805272262&quot;,
+                    &quot;fi&quot;: &quot;103730336&quot;,
+                    &quot;odd&quot;: &quot;2.200&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1803975515&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103709694F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Taby FK v Hammarby TFF&quot;,
+                &quot;fi&quot;: &quot;103709694&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103709694/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Sweden 1.div Norra&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1803975515&quot;,
+                    &quot;fi&quot;: &quot;103709694&quot;,
+                    &quot;odd&quot;: &quot;1.400&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1803975530&quot;,
+                    &quot;fi&quot;: &quot;103709694&quot;,
+                    &quot;odd&quot;: &quot;2.875&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845687623&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293213F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;FC Abdysh-Ata Kant v FC Dordoi Bishkek&quot;,
+                &quot;fi&quot;: &quot;104293213&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293213/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622130000&quot;,
+                &quot;league&quot;: &quot;Kyrgyzstan Top Liga&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845687623&quot;,
+                    &quot;fi&quot;: &quot;104293213&quot;,
+                    &quot;odd&quot;: &quot;1.550&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845687624&quot;,
+                    &quot;fi&quot;: &quot;104293213&quot;,
+                    &quot;odd&quot;: &quot;2.375&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844732755&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104276040F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;ESC Geestemünde v OSC Bremerhaven&quot;,
+                &quot;fi&quot;: &quot;104276040&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104276040/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;league&quot;: &quot;Germany Landespokal&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844732755&quot;,
+                    &quot;fi&quot;: &quot;104276040&quot;,
+                    &quot;odd&quot;: &quot;1.200&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844732756&quot;,
+                    &quot;fi&quot;: &quot;104276040&quot;,
+                    &quot;odd&quot;: &quot;4.333&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1733811123&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E102765214F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;147&quot;,
+                &quot;team_name&quot;: &quot;Argentina v Paraguay&quot;,
+                &quot;fi&quot;: &quot;102765214&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E102765214/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622010000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Copa America&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1733811123&quot;,
+                    &quot;fi&quot;: &quot;102765214&quot;,
+                    &quot;odd&quot;: &quot;2.200&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1733811127&quot;,
+                    &quot;fi&quot;: &quot;102765214&quot;,
+                    &quot;odd&quot;: &quot;1.667&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838071192&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104181022F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Deportivo Guaymallen v Lujan Sport Club Mendoza&quot;,
+                &quot;fi&quot;: &quot;104181022&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104181022/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621193000&quot;,
+                &quot;league&quot;: &quot;Argentina Regional League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838071192&quot;,
+                    &quot;fi&quot;: &quot;104181022&quot;,
+                    &quot;odd&quot;: &quot;1.600&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838071197&quot;,
+                    &quot;fi&quot;: &quot;104181022&quot;,
+                    &quot;odd&quot;: &quot;2.300&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843258373&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104255839F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Drogheda United v Dundalk&quot;,
+                &quot;fi&quot;: &quot;104255839&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104255839/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621194500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Republic of Ireland Premier Division&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843258373&quot;,
+                    &quot;fi&quot;: &quot;104255839&quot;,
+                    &quot;odd&quot;: &quot;1.800&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843258374&quot;,
+                    &quot;fi&quot;: &quot;104255839&quot;,
+                    &quot;odd&quot;: &quot;2.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1840804665&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104219686F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;18&quot;,
+                &quot;team_name&quot;: &quot;Vidir Gardur v Ellidi&quot;,
+                &quot;fi&quot;: &quot;104219686&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104219686/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621210000&quot;,
+                &quot;league&quot;: &quot;Iceland 3 Deild&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1840804665&quot;,
+                    &quot;fi&quot;: &quot;104219686&quot;,
+                    &quot;odd&quot;: &quot;1.333&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1840804666&quot;,
+                    &quot;fi&quot;: &quot;104219686&quot;,
+                    &quot;odd&quot;: &quot;3.400&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1781900130&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103405262F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Oygarden v Rosenborg 2&quot;,
+                &quot;fi&quot;: &quot;103405262&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103405262/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Norway Division 2 Group 2&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1781900130&quot;,
+                    &quot;fi&quot;: &quot;103405262&quot;,
+                    &quot;odd&quot;: &quot;1.250&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1781900160&quot;,
+                    &quot;fi&quot;: &quot;103405262&quot;,
+                    &quot;odd&quot;: &quot;4.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1840913318&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104220844F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Al Shorta SC v Al Naft SC&quot;,
+                &quot;fi&quot;: &quot;104220844&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104220844/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621171500&quot;,
+                &quot;league&quot;: &quot;Iraq League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1840913318&quot;,
+                    &quot;fi&quot;: &quot;104220844&quot;,
+                    &quot;odd&quot;: &quot;2.400&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1840913325&quot;,
+                    &quot;fi&quot;: &quot;104220844&quot;,
+                    &quot;odd&quot;: &quot;1.533&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845687662&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293215F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Nevezis v Suduva Marijampole&quot;,
+                &quot;fi&quot;: &quot;104293215&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293215/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622160000&quot;,
+                &quot;league&quot;: &quot;Lithuania Cup&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845687662&quot;,
+                    &quot;fi&quot;: &quot;104293215&quot;,
+                    &quot;odd&quot;: &quot;1.500&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845687663&quot;,
+                    &quot;fi&quot;: &quot;104293215&quot;,
+                    &quot;odd&quot;: &quot;2.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845689636&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293267F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Lokomotiv Tashkent Women v FK Buxoro Women&quot;,
+                &quot;fi&quot;: &quot;104293267&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293267/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622083000&quot;,
+                &quot;league&quot;: &quot;Uzbekistan League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845689636&quot;,
+                    &quot;fi&quot;: &quot;104293267&quot;,
+                    &quot;odd&quot;: &quot;1.500&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845689637&quot;,
+                    &quot;fi&quot;: &quot;104293267&quot;,
+                    &quot;odd&quot;: &quot;2.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845685612&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293149F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Ida-Virumaa FC Alliance v Tallinna JK Legion II&quot;,
+                &quot;fi&quot;: &quot;104293149&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293149/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;Estonia Esiliiga B&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845685612&quot;,
+                    &quot;fi&quot;: &quot;104293149&quot;,
+                    &quot;odd&quot;: &quot;1.220&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845685613&quot;,
+                    &quot;fi&quot;: &quot;104293149&quot;,
+                    &quot;odd&quot;: &quot;4.150&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1715112754&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E102526954F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;156&quot;,
+                &quot;team_name&quot;: &quot;Russia v Denmark&quot;,
+                &quot;fi&quot;: &quot;102526954&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E102526954/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621200000&quot;,
+                &quot;au&quot;: &quot;5&quot;,
+                &quot;league&quot;: &quot;Euro 2020&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1715112754&quot;,
+                    &quot;fi&quot;: &quot;102526954&quot;,
+                    &quot;odd&quot;: &quot;2.000&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1715112761&quot;,
+                    &quot;fi&quot;: &quot;102526954&quot;,
+                    &quot;odd&quot;: &quot;1.800&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845689451&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293263F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;19&quot;,
+                &quot;team_name&quot;: &quot;Simba Sports Club v Mbeya City&quot;,
+                &quot;fi&quot;: &quot;104293263&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293263/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Tanzania Premier League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845689451&quot;,
+                    &quot;fi&quot;: &quot;104293263&quot;,
+                    &quot;odd&quot;: &quot;1.800&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845689453&quot;,
+                    &quot;fi&quot;: &quot;104293263&quot;,
+                    &quot;odd&quot;: &quot;2.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845850325&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104295903F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Western Strikers Reserves v Adelaide Cobras Reserves&quot;,
+                &quot;fi&quot;: &quot;104295903&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104295903/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622103000&quot;,
+                &quot;league&quot;: &quot;Australia South Australia State League Reserves&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845850325&quot;,
+                    &quot;fi&quot;: &quot;104295903&quot;,
+                    &quot;odd&quot;: &quot;1.286&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845850330&quot;,
+                    &quot;fi&quot;: &quot;104295903&quot;,
+                    &quot;odd&quot;: &quot;3.600&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844158535&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267673F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Fints (FIN) Esports v Confession (CFI) Esports&quot;,
+                &quot;fi&quot;: &quot;104267673&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267673/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621171500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844158535&quot;,
+                    &quot;fi&quot;: &quot;104267673&quot;,
+                    &quot;odd&quot;: &quot;1.190&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844158541&quot;,
+                    &quot;fi&quot;: &quot;104267673&quot;,
+                    &quot;odd&quot;: &quot;4.300&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843258567&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104255845F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Derry City v Sligo Rovers&quot;,
+                &quot;fi&quot;: &quot;104255845&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104255845/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621194500&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Republic of Ireland Premier Division&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843258567&quot;,
+                    &quot;fi&quot;: &quot;104255845&quot;,
+                    &quot;odd&quot;: &quot;2.500&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843258568&quot;,
+                    &quot;fi&quot;: &quot;104255845&quot;,
+                    &quot;odd&quot;: &quot;1.500&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1805777110&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103739363F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;27&quot;,
+                &quot;team_name&quot;: &quot;Esteghlal Khuzestan v Fajr Shahid Sepasi&quot;,
+                &quot;fi&quot;: &quot;103739363&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103739363/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621172000&quot;,
+                &quot;league&quot;: &quot;Iran Div 1&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1805777110&quot;,
+                    &quot;fi&quot;: &quot;103739363&quot;,
+                    &quot;odd&quot;: &quot;2.875&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1805777114&quot;,
+                    &quot;fi&quot;: &quot;103739363&quot;,
+                    &quot;odd&quot;: &quot;1.400&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1805332238&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103731430F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;64&quot;,
+                &quot;team_name&quot;: &quot;Riga FC v Valmiera FC&quot;,
+                &quot;fi&quot;: &quot;103731430&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103731430/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Latvia Virsliga&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1805332238&quot;,
+                    &quot;fi&quot;: &quot;103731430&quot;,
+                    &quot;odd&quot;: &quot;1.650&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1805332239&quot;,
+                    &quot;fi&quot;: &quot;103731430&quot;,
+                    &quot;odd&quot;: &quot;2.200&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845688482&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293246F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Zvezda 2005 Perm Women v CSKA Moscow Women&quot;,
+                &quot;fi&quot;: &quot;104293246&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293246/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;Russia Premier Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845688482&quot;,
+                    &quot;fi&quot;: &quot;104293246&quot;,
+                    &quot;odd&quot;: &quot;2.000&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845688488&quot;,
+                    &quot;fi&quot;: &quot;104293246&quot;,
+                    &quot;odd&quot;: &quot;1.800&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843684211&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104261954F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;APR FC v Rutsiro FC&quot;,
+                &quot;fi&quot;: &quot;104261954&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104261954/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Rwanda National League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843684211&quot;,
+                    &quot;fi&quot;: &quot;104261954&quot;,
+                    &quot;odd&quot;: &quot;1.700&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843684215&quot;,
+                    &quot;fi&quot;: &quot;104261954&quot;,
+                    &quot;odd&quot;: &quot;2.100&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838725754&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104187332F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;FC Rosengård Women v Vittsjö GIK Women&quot;,
+                &quot;fi&quot;: &quot;104187332&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104187332/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Sweden Damallsvenskan&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838725754&quot;,
+                    &quot;fi&quot;: &quot;104187332&quot;,
+                    &quot;odd&quot;: &quot;1.600&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838725757&quot;,
+                    &quot;fi&quot;: &quot;104187332&quot;,
+                    &quot;odd&quot;: &quot;2.300&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844152447&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267581F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Im Not Over (PNZ) Esports v Tahcop73 (TAH) Esports&quot;,
+                &quot;fi&quot;: &quot;104267581&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267581/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621175000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844152447&quot;,
+                    &quot;fi&quot;: &quot;104267581&quot;,
+                    &quot;odd&quot;: &quot;1.240&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844152460&quot;,
+                    &quot;fi&quot;: &quot;104267581&quot;,
+                    &quot;odd&quot;: &quot;3.700&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1715113190&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E102526959F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;156&quot;,
+                &quot;team_name&quot;: &quot;Finland v Belgium&quot;,
+                &quot;fi&quot;: &quot;102526959&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E102526959/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621200000&quot;,
+                &quot;au&quot;: &quot;5&quot;,
+                &quot;league&quot;: &quot;Euro 2020&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1715113190&quot;,
+                    &quot;fi&quot;: &quot;102526959&quot;,
+                    &quot;odd&quot;: &quot;1.909&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1715113216&quot;,
+                    &quot;fi&quot;: &quot;102526959&quot;,
+                    &quot;odd&quot;: &quot;1.909&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844570085&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104273590F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;27&quot;,
+                &quot;team_name&quot;: &quot;Iraq U20 v Comoros U20&quot;,
+                &quot;fi&quot;: &quot;104273590&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104273590/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Arab Cup U20&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844570085&quot;,
+                    &quot;fi&quot;: &quot;104273590&quot;,
+                    &quot;odd&quot;: &quot;1.533&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844570090&quot;,
+                    &quot;fi&quot;: &quot;104273590&quot;,
+                    &quot;odd&quot;: &quot;2.400&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845862342&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104296010F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;PSG (Xameleon) Esports v Bayern (Zaha) Esports&quot;,
+                &quot;fi&quot;: &quot;104296010&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104296010/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;league&quot;: &quot;Esoccer Battle - 8 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845862342&quot;,
+                    &quot;fi&quot;: &quot;104296010&quot;,
+                    &quot;odd&quot;: &quot;1.475&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845862343&quot;,
+                    &quot;fi&quot;: &quot;104296010&quot;,
+                    &quot;odd&quot;: &quot;2.475&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843258538&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104255843F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;St Patrick's Athletic v Finn Harps&quot;,
+                &quot;fi&quot;: &quot;104255843&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104255843/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621194500&quot;,
+                &quot;league&quot;: &quot;Republic of Ireland Premier Division&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843258538&quot;,
+                    &quot;fi&quot;: &quot;104255843&quot;,
+                    &quot;odd&quot;: &quot;2.250&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843258541&quot;,
+                    &quot;fi&quot;: &quot;104255843&quot;,
+                    &quot;odd&quot;: &quot;1.615&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844732930&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104276047F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;SC Vahr Blockdiek v VfL 07 Bremen&quot;,
+                &quot;fi&quot;: &quot;104276047&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104276047/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;league&quot;: &quot;Germany Landespokal&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844732930&quot;,
+                    &quot;fi&quot;: &quot;104276047&quot;,
+                    &quot;odd&quot;: &quot;1.200&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844732931&quot;,
+                    &quot;fi&quot;: &quot;104276047&quot;,
+                    &quot;odd&quot;: &quot;4.333&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1838096786&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104181182F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;23&quot;,
+                &quot;team_name&quot;: &quot;Stjarnan Women v IBV Vestmannaeyjar Women&quot;,
+                &quot;fi&quot;: &quot;104181182&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104181182/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621190000&quot;,
+                &quot;league&quot;: &quot;Iceland Premier League Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1838096786&quot;,
+                    &quot;fi&quot;: &quot;104181182&quot;,
+                    &quot;odd&quot;: &quot;1.444&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1838096793&quot;,
+                    &quot;fi&quot;: &quot;104181182&quot;,
+                    &quot;odd&quot;: &quot;2.700&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1805865325&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103740843F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Mandurah City v Swan United&quot;,
+                &quot;fi&quot;: &quot;103740843&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103740843/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622120000&quot;,
+                &quot;league&quot;: &quot;Australia Western Australia State League 1&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1805865325&quot;,
+                    &quot;fi&quot;: &quot;103740843&quot;,
+                    &quot;odd&quot;: &quot;1.400&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1805865326&quot;,
+                    &quot;fi&quot;: &quot;103740843&quot;,
+                    &quot;odd&quot;: &quot;2.850&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845684386&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293110F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;19&quot;,
+                &quot;team_name&quot;: &quot;Boca Juniors Women v San Lorenzo Women&quot;,
+                &quot;fi&quot;: &quot;104293110&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293110/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Argentina Championship Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845684386&quot;,
+                    &quot;fi&quot;: &quot;104293110&quot;,
+                    &quot;odd&quot;: &quot;1.550&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845684389&quot;,
+                    &quot;fi&quot;: &quot;104293110&quot;,
+                    &quot;odd&quot;: &quot;2.375&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844570409&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104273593F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;27&quot;,
+                &quot;team_name&quot;: &quot;Saudi Arabia U20 v Uzbekistan U20&quot;,
+                &quot;fi&quot;: &quot;104273593&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104273593/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Arab Cup U20&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844570409&quot;,
+                    &quot;fi&quot;: &quot;104273593&quot;,
+                    &quot;odd&quot;: &quot;2.150&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844570416&quot;,
+                    &quot;fi&quot;: &quot;104273593&quot;,
+                    &quot;odd&quot;: &quot;1.667&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844608408&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104273997F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Blumenthaler SV v Union 60 Bremen&quot;,
+                &quot;fi&quot;: &quot;104273997&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104273997/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621183000&quot;,
+                &quot;league&quot;: &quot;Germany Landespokal&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844608408&quot;,
+                    &quot;fi&quot;: &quot;104273997&quot;,
+                    &quot;odd&quot;: &quot;1.125&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844608498&quot;,
+                    &quot;fi&quot;: &quot;104273997&quot;,
+                    &quot;odd&quot;: &quot;6.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845863264&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104296016F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Barcelona (Sinner2k) Esports v Liverpool (Muromets) Esports&quot;,
+                &quot;fi&quot;: &quot;104296016&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104296016/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621171200&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Battle - 8 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845863264&quot;,
+                    &quot;fi&quot;: &quot;104296016&quot;,
+                    &quot;odd&quot;: &quot;1.200&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845863267&quot;,
+                    &quot;fi&quot;: &quot;104296016&quot;,
+                    &quot;odd&quot;: &quot;4.150&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1846398858&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104303597F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;22&quot;,
+                &quot;team_name&quot;: &quot;Olimpija Ljubljana v Neftchi Baku&quot;,
+                &quot;fi&quot;: &quot;104303597&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104303597/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;league&quot;: &quot;Europe Friendlies&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1846398858&quot;,
+                    &quot;fi&quot;: &quot;104303597&quot;,
+                    &quot;odd&quot;: &quot;1.700&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1846398863&quot;,
+                    &quot;fi&quot;: &quot;104303597&quot;,
+                    &quot;odd&quot;: &quot;2.100&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843258886&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104255856F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Longford Town v Waterford FC&quot;,
+                &quot;fi&quot;: &quot;104255856&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104255856/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621194500&quot;,
+                &quot;league&quot;: &quot;Republic of Ireland Premier Division&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843258886&quot;,
+                    &quot;fi&quot;: &quot;104255856&quot;,
+                    &quot;odd&quot;: &quot;2.300&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843258895&quot;,
+                    &quot;fi&quot;: &quot;104255856&quot;,
+                    &quot;odd&quot;: &quot;1.600&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844570608&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104273599F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;18&quot;,
+                &quot;team_name&quot;: &quot;CE Bento Goncalves RS U20 v Atletico Clube Sulbrasil U20&quot;,
+                &quot;fi&quot;: &quot;104273599&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104273599/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621190000&quot;,
+                &quot;league&quot;: &quot;Brazil U20 Cup&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844570608&quot;,
+                    &quot;fi&quot;: &quot;104273599&quot;,
+                    &quot;odd&quot;: &quot;1.615&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844570620&quot;,
+                    &quot;fi&quot;: &quot;104273599&quot;,
+                    &quot;odd&quot;: &quot;2.250&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844283654&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104269217F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;19&quot;,
+                &quot;team_name&quot;: &quot;Klepp Women v Lillestrom SK Women&quot;,
+                &quot;fi&quot;: &quot;104269217&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104269217/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Norway Toppserien Women&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844283654&quot;,
+                    &quot;fi&quot;: &quot;104269217&quot;,
+                    &quot;odd&quot;: &quot;1.600&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844283659&quot;,
+                    &quot;fi&quot;: &quot;104269217&quot;,
+                    &quot;odd&quot;: &quot;2.300&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1715112249&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E102526950F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;151&quot;,
+                &quot;team_name&quot;: &quot;Ukraine v Austria&quot;,
+                &quot;fi&quot;: &quot;102526950&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E102526950/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;au&quot;: &quot;5&quot;,
+                &quot;league&quot;: &quot;Euro 2020&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1715112249&quot;,
+                    &quot;fi&quot;: &quot;102526950&quot;,
+                    &quot;odd&quot;: &quot;2.500&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1715112267&quot;,
+                    &quot;fi&quot;: &quot;102526950&quot;,
+                    &quot;odd&quot;: &quot;1.533&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845864782&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104296043F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Real Madrid (PrinceV) Esports v PSG (Xameleon) Esports&quot;,
+                &quot;fi&quot;: &quot;104296043&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104296043/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621172400&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Battle - 8 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845864782&quot;,
+                    &quot;fi&quot;: &quot;104296043&quot;,
+                    &quot;odd&quot;: &quot;1.450&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845864783&quot;,
+                    &quot;fi&quot;: &quot;104296043&quot;,
+                    &quot;odd&quot;: &quot;2.550&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1844158605&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104267681F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;4&quot;,
+                &quot;team_name&quot;: &quot;Trader FC (TRD) Esports v AB OVO (ABV) Esports&quot;,
+                &quot;fi&quot;: &quot;104267681&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104267681/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621174000&quot;,
+                &quot;vi&quot;: &quot;7&quot;,
+                &quot;league&quot;: &quot;Esoccer Liga Pro - 12 mins play&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1844158605&quot;,
+                    &quot;fi&quot;: &quot;104267681&quot;,
+                    &quot;odd&quot;: &quot;1.160&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1844158606&quot;,
+                    &quot;fi&quot;: &quot;104267681&quot;,
+                    &quot;odd&quot;: &quot;4.800&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843373982&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104257473F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;Curico Unido v Rangers de Talca&quot;,
+                &quot;fi&quot;: &quot;104257473&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104257473/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622013000&quot;,
+                &quot;league&quot;: &quot;Chile Cup&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843373982&quot;,
+                    &quot;fi&quot;: &quot;104257473&quot;,
+                    &quot;odd&quot;: &quot;2.000&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843373986&quot;,
+                    &quot;fi&quot;: &quot;104257473&quot;,
+                    &quot;odd&quot;: &quot;1.800&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1845685816&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104293155F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;2&quot;,
+                &quot;team_name&quot;: &quot;FC Flora Tallinn U19 v FC Levadia Tallinn U19&quot;,
+                &quot;fi&quot;: &quot;104293155&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104293155/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622150000&quot;,
+                &quot;league&quot;: &quot;Estonia U19 League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1845685816&quot;,
+                    &quot;fi&quot;: &quot;104293155&quot;,
+                    &quot;odd&quot;: &quot;1.250&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1845685819&quot;,
+                    &quot;fi&quot;: &quot;104293155&quot;,
+                    &quot;odd&quot;: &quot;3.800&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1715112470&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E102526952F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;156&quot;,
+                &quot;team_name&quot;: &quot;North Macedonia v Netherlands&quot;,
+                &quot;fi&quot;: &quot;102526952&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E102526952/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621170000&quot;,
+                &quot;au&quot;: &quot;5&quot;,
+                &quot;league&quot;: &quot;Euro 2020&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1715112470&quot;,
+                    &quot;fi&quot;: &quot;102526952&quot;,
+                    &quot;odd&quot;: &quot;1.400&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1715112475&quot;,
+                    &quot;fi&quot;: &quot;102526952&quot;,
+                    &quot;odd&quot;: &quot;3.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1843684367&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E104261957F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;14&quot;,
+                &quot;team_name&quot;: &quot;AS Kigali v Police FC&quot;,
+                &quot;fi&quot;: &quot;104261957&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E104261957/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210622140000&quot;,
+                &quot;league&quot;: &quot;Rwanda National League&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1843684367&quot;,
+                    &quot;fi&quot;: &quot;104261957&quot;,
+                    &quot;odd&quot;: &quot;1.800&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1843684371&quot;,
+                    &quot;fi&quot;: &quot;104261957&quot;,
+                    &quot;odd&quot;: &quot;2.000&quot;
+                }
+            },
+            {
+                &quot;team_id&quot;: &quot;PC1803853715&quot;,
+                &quot;team_it&quot;: &quot;ACB1C1D56F2Q1F24RCC-PA-AEACB1C1D8E103708232F3P56Q0&quot;,
+                &quot;team_mr&quot;: &quot;71&quot;,
+                &quot;team_name&quot;: &quot;Odd 2 v Fram&quot;,
+                &quot;fi&quot;: &quot;103708232&quot;,
+                &quot;pd&quot;: &quot;/#/AC/B1/C1/D8/E103708232/F3/P^56/Q^0/&quot;,
+                &quot;bc&quot;: &quot;20210621180000&quot;,
+                &quot;league&quot;: &quot;Norway Division 2 Group 2&quot;,
+                &quot;over&quot;: {
+                    &quot;types&quot;: &quot;Yes&quot;,
+                    &quot;id&quot;: &quot;1803853715&quot;,
+                    &quot;fi&quot;: &quot;103708232&quot;,
+                    &quot;odd&quot;: &quot;1.400&quot;
+                },
+                &quot;under&quot;: {
+                    &quot;types&quot;: &quot;No&quot;,
+                    &quot;id&quot;: &quot;1803853720&quot;,
+                    &quot;fi&quot;: &quot;103708232&quot;,
+                    &quot;odd&quot;: &quot;2.875&quot;
+                }
+            }
+        ],
+        &quot;total&quot;: 95,
+        &quot;channel&quot;: &quot;AllMatchListByOverUnder&quot;,
+        &quot;sync_time&quot;: 1624291086
+    },
+    &quot;msg&quot;: &quot;Success&quot;
+}
+</code></pre></div><h3 id="_6-请求返回结果参数说明"><a href="#_6-请求返回结果参数说明" class="header-anchor">#</a> 6) 请求返回结果参数说明:</h3> <div class="table"><table><thead><tr><th>字段名称</th> <th style="text-align:center;">字段说明</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">必填</th> <th style="text-align:right;">备注</th></tr></thead> <tbody><tr><td>code</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>data</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>list</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>team_id</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>team_it</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>team_mr</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>team_name</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>fi</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>pd</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>bc</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>league</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>over</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>types</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>id</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>odd</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>under</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>vi</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>au</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>total</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>channel</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>sync_time</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr> <tr><td>msg</td> <td style="text-align:center;"></td> <td style="text-align:center;">string</td> <td style="text-align:center;">Y</td> <td style="text-align:right;">-</td></tr></tbody></table></div></div> <div><!----></div> <div class="content-wrapper"><div class="flex w-full items-center"><div class="w-3/5"><div class="vote"><div class="pane options"><h4 class="heading block">
+            Was this page helpful?
+          </h4> <div class="vote-buttons inline-block"><button aria-label="Yes" class="option yes"><svg aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 21H5V9H1V21ZM23 10C23 8.9 22.1 8 21 8H14.69L15.64 3.43L15.67
+      3.11C15.67 2.7 15.5 2.32 15.23 2.05L14.17 1L7.59 7.59C7.22 7.95 7
+      8.45 7 9V19C7 20.1 7.9 21 9 21H18C18.83 21 19.54 20.5 19.84
+      19.78L22.86 12.73C22.95 12.5 23 12.26 23 12V10.09L22.99 10.08L23 10Z" fill="currentColor"></path></svg></button> <button aria-label="No" class="option no"><svg aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 3H6C5.17 3 4.46 3.5 4.16 4.22L1.14 11.27C1.05 11.5 1 11.74 1
+                  12V13.91L1.01 13.92L1 14C1 15.1 1.9 16 3 16H9.31L8.36 20.57L8.33
+                  20.89C8.33 21.3 8.5 21.68 8.77 21.95L9.83 23L16.42 16.41C16.78 16.05
+                  17 15.55 17 15V5C17 3.9 16.1 3 15 3ZM19 3V15H23V3H19Z" fill="currentColor"></path></svg></button></div> <!----></div></div></div> <div class="footer-links"><p><div class="edit-link"><!----> <a href="https://github.com/bet365data/docs/edit/main/docs/bet365/cn/PreMatchOverUnderList.md" target="_blank" rel="noopener noreferrer">
+    edit this page
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div></p> <p><a href="https://t.me/Bet365Data/" target="_blank" rel="noopener"><span class="right-footer-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="12" height="12" class="svg-inline--fa fa-envelope fa-w-16 fa-3x"><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></span>
+          contact us
+        </a></p> <p><a href="https://help.bet365data.com/" target="_blank" rel="noopener"><span class="right-footer-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="reply" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="12" height="12" class="svg-inline--fa fa-reply fa-w-16 fa-3x"><path fill="currentColor" d="M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"></path></svg></span>
+          back to bet365data.com
+        </a></p> <div class="switch-wrapper block xl:hidden"><button aria-label="Switch dark/light mode" class="dark-mode-toggle light"><div class="backdrop relative w-full h-full"><div class="knob"></div></div></button></div></div></div></div> </main></div> <div class="right-bar"><div class="switch-wrapper hidden xl:block"><button aria-label="Switch dark/light mode" class="dark-mode-toggle light"><div class="backdrop relative w-full h-full"><div class="knob"></div></div></button></div> <div class="sidebar-link-wrapper"><ul class="sidebar-links pl-0"><li><!----> <!----> <!----></li></ul></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d0ed0da3.js" defer></script><script src="/assets/js/3.56c1cd34.js" defer></script><script src="/assets/js/46.d5d03ab8.js" defer></script>
+  </body>
+</html>
